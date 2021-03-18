@@ -2,7 +2,7 @@
 #include<string.h>
 int main()
 {
-    int n,i,j,x=0,y=0,k=0;
+    int n,i,j,x=0,y=0,k=0,sw=1;
     scanf("%d",&n);
     char s[n][n],S[250];
     for(i=0;i<n;i++)
@@ -12,32 +12,35 @@ int main()
     if(S[0]=='R')
     {
         s[0][0]='-';
-        x++;
+        y++;
     }
     else
     {
         s[0][0]='|';
-        y++;
+        x++;
     }
     for(i=1;i<strlen(S);i++)
     {
         if(S[i]=='U'||S[i]=='D')
         {
+            if(S[i+1]=='R'||S[i+1]=='L')
+            s[x][y]='+';
+            else
             s[x][y]='|';
-            if(k>0&&S[i]=='U')
+            if(S[i]=='U')
                 x--;
-            else if(k>0&&S[i]=='D')
+            else if(S[i]=='D')
                 x++;
-
-
         }
         else if(S[i]=='R'||S[i]=='L')
         {
+            if(S[i+1]=='U'||S[i+1]=='D')
+            s[x][y]='+';
+            else
             s[x][y]='-';
-            s[x][y]='|';
-            if(k>0&&S[i]=='R')
+            if(S[i]=='R')
                 y++;
-            else if(k>0&&S[i]=='L')
+            else if(S[i]=='L')
                 y--;
         }
     }
