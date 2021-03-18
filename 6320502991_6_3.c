@@ -12,5 +12,15 @@ int main()
         scanf("%d",&b[i]);
         scanf("%d",&c[i]);
     }
+    for(i=0;i<q;i++)
+    {
+        if(a[i]=='U')
+        {
 
+        }
+        else if(a[i]=='P')
+        {
+
+        }
+    }
 }
