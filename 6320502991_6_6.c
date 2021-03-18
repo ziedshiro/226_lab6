@@ -31,7 +31,7 @@ int main()
 
 
         }
-        else
+        else if(S[i]=='R'||S[i]=='L')
         {
             s[x][y]='-';
             s[x][y]='|';
@@ -41,4 +41,11 @@ int main()
                 y--;
         }
     }
+    for(i=0;i<n;i++)
+        {
+           for(j=0;j<n;j++)
+            printf("%c",s[i][j]);
+            printf("\n");
+        }
+
 }
