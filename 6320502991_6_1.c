@@ -4,8 +4,8 @@ int main()
 {
     int n,i;
     scanf("%d",&n);
-    char s[n];
+    char s[n][n];
     for(i=0;i<n;i++)
-        scanf("%s",&s);
-    printf("%c",s[1]);
+        scanf("%s",s[i]);
+    printf("%c",s[1][1]);
 }
