@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,q;
+    int n,q,j,max;
     scanf("%d %d",&n,&q);
     int s[n],i,a[q],b[q],c[q];
     for(i=0;i<n;i++)
@@ -15,12 +15,16 @@ int main()
     for(i=0;i<q;i++)
     {
         if(a[i]=='U')
-        {
-
-        }
+            s[b[i]-1]=c[i];
         else if(a[i]=='P')
         {
-
+            max=s[b[i]-1];
+            for(j=b[i]-1;j<c[i];j++)
+            {
+                if(max<s[j])
+                    max=s[j];
+            }
+            printf("%d\n",max);
         }
     }
 }
