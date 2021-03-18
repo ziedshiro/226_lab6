@@ -10,4 +10,5 @@ int main()
     for(i=0;i<n;i++)
           if(N[0][i]==N[1][i])
                 r++;
+    printf("%d %d",r,n-r);
 }
