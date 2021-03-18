@@ -29,7 +29,7 @@ int main()
             z[j+1]=X;
         }
     }
-    printf("%d",z[n-1]);
+    printf("%d ",z[n-1]);
     if(r[n-2]==r[n-3])
         printf("%d",z[0]);
     else
