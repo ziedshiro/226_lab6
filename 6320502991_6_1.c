@@ -4,15 +4,15 @@ int main()
 {
     int n,i,j,sw,x;
     scanf("%d",&n);
-    char s[n][n],S[n][n];
-    int r[n];
+    char s[n][1000],S[n][1000];
+    int r[n],l[n];
     for(i=0;i<n;i++)
         scanf("%s",s[i]);
     for(i=0;i<n;i++)
         {
             S[i][0]=s[i][0];
             if(s[i][0]>='a'&&s[i][0]<='z')
-                S[i][0]-='a'-'A';
+                S[i][0]-=('a'-'A');
         }
     for(i=0;i<n;i++)
         r[i]=i;
@@ -29,7 +29,10 @@ int main()
                     r[j+1]=x;
                 }
         }
-
     for(i=0;i<n;i++)
+    {
         printf("%s\n",s[r[i]]);
+    }
+
+
 }
