@@ -24,7 +24,9 @@ int main()
         if(S[i]=='U'||S[i]=='D')
         {
             if(S[i+1]=='R'||S[i+1]=='L')
-            s[x][y]='+';
+            {
+                s[x][y]='+';
+            }
             else
             s[x][y]='|';
             if(S[i]=='U')
@@ -35,7 +37,9 @@ int main()
         else if(S[i]=='R'||S[i]=='L')
         {
             if(S[i+1]=='U'||S[i+1]=='D')
-            s[x][y]='+';
+            {
+                s[x][y]='+';
+            }
             else
             s[x][y]='-';
             if(S[i]=='R')
@@ -50,5 +54,4 @@ int main()
             printf("%c",s[i][j]);
             printf("\n");
         }
-
 }
